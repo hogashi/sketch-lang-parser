@@ -1,2 +1,2 @@
 # sketch-lang-parser
-言語パーサの練習
+構文解析の練習
