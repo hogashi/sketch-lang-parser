@@ -16,7 +16,7 @@ digit [0-9]
 : { printf("COLON\n"); }
 , { printf("COMMA\n"); }
 \"({notbsl}|{bslitself}|{escapenotq}|{escapeq}|{bslitself}{escapeq})*\" { printf("STRING\n"); }
-{minus}?{digit19}{digit}*({dot}{digit}+)?({napiere}({minus}|{plus})?{digit}+)? { printf("NUM\n"); }
+{minus}?(0|{digit19}{digit}*)({dot}{digit}+)?({napiere}({minus}|{plus})?{digit}+)? { printf("NUM\n"); }
 true { printf("V_TRUE\n"); }
 false { printf("V_FALSE\n"); }
 null { printf("V_NULL\n"); }
