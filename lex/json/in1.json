@@ -1,0 +1,8 @@
+{
+  "test1": "1\"2\\\"3\\\"\\\\\"",
+  "v": {
+    "str": 123
+  },
+  "tf": false,
+  "opts": [true, true, null]
+}
