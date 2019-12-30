@@ -19,5 +19,5 @@ digit [0-9]
 true { printf("V_TRUE\n"); }
 false { printf("V_FALSE\n"); }
 null { printf("V_NULL\n"); }
-" " { printf("WHITE\n"); }
+[ \t\n\r] { printf("WHITE\n"); }
 . { printf("CHAR\n"); }
