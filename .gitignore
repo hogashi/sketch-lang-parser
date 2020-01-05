@@ -1,4 +1,5 @@
 *.swp
 
-*.yy.c
+lex.yy.c
+y.tab.c
 *.out
