@@ -15,6 +15,24 @@
 text :
   WHITE value WHITE
   ;
+begin_array :
+  WHITE L_SBR WHITE
+  ;
+end_array :
+  WHITE R_SBR WHITE
+  ;
+begin_object :
+  WHITE L_CBR WHITE
+  ;
+end_object :
+  WHITE R_CBR WHITE
+  ;
+name_separator :
+  WHITE COLON WHITE
+  ;
+value_separator :
+  WHITE COMMA WHITE
+  ;
 value :
   V_FALSE |
   V_NULL |
@@ -25,21 +43,21 @@ value :
   STRING
   ;
 object :
-  L_CBR R_CBR |
-  L_CBR members R_CBR
+  begin_object end_object |
+  begin_object members end_object
   ;
 members :
   member |
-  members COMMA member
+  members value_separator member
   ;
 member :
-  STRING COLON value
+  STRING name_separator value
   ;
 array :
-  L_SBR R_SBR |
-  L_SBR values R_SBR
+  begin_array end_array |
+  begin_array values end_array
   ;
 values :
   value |
-  values COMMA value
+  values value_separator value
   ;
