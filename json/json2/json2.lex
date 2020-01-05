@@ -19,5 +19,5 @@ digit [0-9]
 true { return V_TRUE; }
 false { return V_FALSE; }
 null { return V_NULL; }
-[ \t\n\r]* { return WHITE; }
+[ \t\n\r]+ { return WHITE; }
 . { return CHAR; }
